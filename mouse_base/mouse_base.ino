@@ -55,6 +55,7 @@ void motor_loop()
   addressable_led[0] = CRGB::Black;
   FastLED.show();
   delay(2000);
+  Serial.println("Hello");
 }
 
 void setup() { 
