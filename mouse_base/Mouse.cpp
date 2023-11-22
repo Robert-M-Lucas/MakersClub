@@ -38,6 +38,7 @@ Mouse::Mouse(void)
   
 void Mouse::run_motors(int left, int right)
 {
+
     if (left == 0)
     {
       digitalWrite(MOTOR_A1, 0);
@@ -45,10 +46,10 @@ void Mouse::run_motors(int left, int right)
     } else if (left > 0)
     {
       digitalWrite(MOTOR_A1, 0);
-      analogWrite(MOTOR_A2, left);
+      analogWrite(MOTOR_A2, -left);
     } else
     {
-      digitalWrite(MOTOR_A1, -left);
+      digitalWrite(MOTOR_A1, left);
       analogWrite(MOTOR_A2, 0);
     }
     if (right == 0)
@@ -64,32 +65,4 @@ void Mouse::run_motors(int left, int right)
       digitalWrite(MOTOR_B1, -right);
       analogWrite(MOTOR_B2, 0);
     }
-}
-
-void Mouse::enable_ir(int direction)
-{
-  if (direction == 1)
-  {
-    PORTB |= 1<<0;
-  } else if (direction == 2)
-  {
-    PORTC |= 1<<7;
-  } else if (direction == 3)
-  {
-    PORTB |= 1<<7;
-  }
-}
-
-void Mouse::disable_ir(int direction)
-{
-  if (direction == 1)
-  {
-    PORTB &= ~(1<<0);
-  } else if (direction == 2)
-  {
-    PORTC &= ~(1<<7);
-  } else if (direction == 3)
-  {
-    PORTB &= ~(1<<7);
-  }
 }

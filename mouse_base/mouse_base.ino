@@ -73,15 +73,15 @@ void loop()
 
 void test()
 {
-  mouse.enable_ir(2);
+  mouse.enable_ir(SensorDirection::Side);
   delay(10);
   int LS = analogRead(SEN_LS);
   int RS = analogRead(SEN_RS);
-  mouse.disable_ir(2);
-  mouse.enable_ir(1);
+  mouse.disable_ir(SensorDirection::Side);
+  mouse.enable_ir(SensorDirection::Forward);
   delay(10);
   int turn = analogRead(SEN_LF);
-  mouse.disable_ir(1);
+  mouse.disable_ir(SensorDirection::Forward);
   Serial.println(turn);
   
   int var = 64 + (LS - RS)*2;
