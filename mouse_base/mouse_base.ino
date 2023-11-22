@@ -79,21 +79,15 @@ void test()
   int RS = analogRead(SEN_RS);
   mouse.disable_ir(2);
   mouse.enable_ir(1);
-  //delay(10);
   int turn = analogRead(SEN_LF);
   mouse.disable_ir(1);
-  //Serial.println(turn);
   
-  int var = 64 + (LS - RS)*2;
+  int bias = LS - RS;
   
   if(turn>200){
-    //Reverse, then turn
-    //mouse.run_motors(-64,64);
-    //delay(100);
     mouse.run_motors(-64,-64);
-    //delay(200);
   }else{
     //Forward
-    mouse.run_motors(64,-var);
+    mouse.run_motors(64 + bias,64 - var);
   }
 }
