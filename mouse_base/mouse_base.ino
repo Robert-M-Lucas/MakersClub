@@ -1,6 +1,8 @@
 #include <FastLED.h>
 #include "Pins.h"
 #include "Mouse.h"
+#include "MouseIR.h"
+
 
 CRGB addressable_led[1];
 
@@ -73,21 +75,17 @@ void loop()
 
 void test()
 {
-  mouse.enable_ir(2);
-  //delay(10);
-  int LS = analogRead(SEN_LS);
-  int RS = analogRead(SEN_RS);
-  mouse.disable_ir(2);
-  mouse.enable_ir(1);
-  int turn = analogRead(SEN_LF);
-  mouse.disable_ir(1);
+  IRReading ir = MouseIR::read_all_callibrated();
+  int LS = ir.left;
+  int RS = ir.left;
+  int turn = ir.leftForward;
   
-  int bias = LS - RS;
+  int bias = (LS - RS)/2;
   
-  if(turn>200){
-    mouse.run_motors(-64,-64);
+  if(turn>100){
+    mouse.run_motors(-64,64);
   }else{
     //Forward
-    mouse.run_motors(64 + bias,64 - var);
+    mouse.run_motors(64 + bias,64 - bias);
   }
 }
