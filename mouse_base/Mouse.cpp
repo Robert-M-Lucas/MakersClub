@@ -38,6 +38,7 @@ Mouse::Mouse(void)
   
 void Mouse::run_motors(int left, int right)
 {
+    left *= -1;
 
     if (left == 0)
     {
@@ -46,10 +47,10 @@ void Mouse::run_motors(int left, int right)
     } else if (left > 0)
     {
       digitalWrite(MOTOR_A1, 0);
-      analogWrite(MOTOR_A2, -left);
+      analogWrite(MOTOR_A2, left);
     } else
     {
-      digitalWrite(MOTOR_A1, left);
+      digitalWrite(MOTOR_A1, -left);
       analogWrite(MOTOR_A2, 0);
     }
     if (right == 0)
