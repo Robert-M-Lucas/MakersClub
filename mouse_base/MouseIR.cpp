@@ -13,6 +13,23 @@ IRReading IRReading::scale(unsigned maxValue) {
     
 }
 
+void IRReading::serialPrintValues()
+{
+    Serial.print("Left Side: ");
+    Serial.print(leftSide);
+    Serial.print("| Left Angle: ");
+    Serial.print(leftAngled);
+    Serial.print("| Left Forward: ");
+    Serial.print(leftForward);
+
+    Serial.print("| Right Side: ");
+    Serial.print(rightSide);
+    Serial.print("| Right Angle: ");
+    Serial.print(rightAngled);
+    Serial.print("| Right Forward: ");
+    Serial.println(rightForward);
+}
+
 IRReading IRReading::difference(IRReading before, IRReading after)
 {
     return IRReading {

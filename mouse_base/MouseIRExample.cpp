@@ -11,5 +11,5 @@ void loop() {
     sensors.rightAngled;
 
     sensors.leftForward;
-    sensors.rightForward
+    sensors.rightForward;
 }
