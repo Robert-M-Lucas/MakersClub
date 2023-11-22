@@ -10,15 +10,17 @@ enum SensorDirection {
 class IRReading
 {
 public:
-    unsigned left;
+    unsigned leftSide;
     unsigned leftAngled;
     unsigned leftForward;
 
-    unsigned right;
+    unsigned rightSide;
     unsigned rightAngled;
     unsigned rightForward;
 
     static IRReading difference(IRReading before, IRReading after);
+
+    IRReading scale(unsigned maxValue);
 };
 
 
