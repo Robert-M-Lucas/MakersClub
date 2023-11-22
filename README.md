@@ -14,9 +14,9 @@ This is a project run by Makers' club at University of Bath.
 
 ### Mouse.cpp
 - Define behaviours of Mouse class
-
-### Pins.h
-- Define pins used for motors, sensors and LEDs
+- Functions
+    - Mouse
+    - run_motors
 
 ### Controller.h
 - Define type signatures of Controller class
@@ -24,4 +24,20 @@ This is a project run by Makers' club at University of Bath.
 
 ### Controller.cpp
 - Define behaviours of Controller class
+- Functions
+    - Controller
+    - getBacktrack
+    - mapPath
+    - turnMotor
 
+### MouseIR.h
+- Define type signatures of MouseIR class
+
+### MouseIR.cpp
+- Define behaviours of MouseIR class
+- Functions
+    - enable_ir
+    - disable_ir
+
+### Pins.h
+- Define pins used for motors, sensors and LEDs
