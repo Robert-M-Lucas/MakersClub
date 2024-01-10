@@ -9,9 +9,15 @@ unsigned sub_or_zero(unsigned a, unsigned b) {
     return b - a;
 }
 
-IRReading IRReading::scale(unsigned maxValue) {
-    
-}
+// void IRReading::scale(unsigned maxValue) {
+//     leftSide = constrain(map(leftSide, 0, maxValue, 0, 1024), 0, 1024);
+//     leftAngled = constrain(map(leftAngled, 0, maxValue, 0, 1024), 0, 1024);
+//     leftForward = constrain(map(leftForward, 0, maxValue, 0, 1024), 0, 1024);
+
+//     rightSide = constrain(map(rightSide, 0, maxValue, 0, 1024), 0, 1024);
+//     rightAngled = constrain(map(rightAngled, 0, maxValue, 0, 1024), 0, 1024);
+//     rightForward = constrain(map(rightForward, 0, maxValue, 0, 1024), 0, 1024);
+// }
 
 void IRReading::serialPrintValues()
 {

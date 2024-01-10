@@ -3,89 +3,61 @@
 #include "Mouse.h"
 #include "MouseIR.h"
 
-
 CRGB addressable_led[1];
 
 Mouse mouse;
 
-void sensor_loop()
-{
-  addressable_led[0] = CRGB::Blue;
-  FastLED.show();
-  mouse.enable_ir(1);
-  delay(100);
-  Serial.println(analogRead(SEN_LF));
-  Serial.println(analogRead(SEN_RF));
-  mouse.disable_ir(1);
-  mouse.enable_ir(2);
-  delay(100);
-  Serial.println(analogRead(SEN_LS));
-  Serial.println(analogRead(SEN_RS));
-  mouse.disable_ir(2);
-  mouse.enable_ir(3);
-  delay(100);
-  Serial.println(analogRead(SEN_LA));
-  Serial.println(analogRead(SEN_RA));
-  mouse.disable_ir(3);
-  Serial.println("");
-  addressable_led[0] = CRGB::Black;
-  FastLED.show();
-  delay(1000);
-}
-
-void motor_loop()
-{  
-  // enable the motor controller
-  digitalWrite(MSLEEP_PIN, 1);
-    
-  addressable_led[0] = CRGB::Green;
-  FastLED.show();
-  mouse.run_motors(-255,255);//mouse.run_motors(64,64);
-  delay(500);
-
-  mouse.run_motors(0,0);
-  addressable_led[0] = CRGB::Black;
-  FastLED.show();
-  delay(2000);
-  
-  addressable_led[0] = CRGB::Red;
-  FastLED.show();
-  mouse.run_motors(255,-255);//mouse.run_motors(-64,-64);
-  delay(500);
-
-  mouse.run_motors(0,0);
-  addressable_led[0] = CRGB::Black;
-  FastLED.show();
-  delay(2000);
-}
+uint8_t a = MAG_ENCA;
 
 void setup() { 
     // configure the addressable led
     FastLED.addLeds<WS2812B, LED_PIN, GRB>(addressable_led, 1);
 
     Serial.begin(9600);
+    // pinMode(a, INPUT);
 }
-int before = 0,after = 0;
+
 void loop()
 {
-  //sensor_loop();
-  //motor_loop();
-  test();
+    test();
 }
+
+int bias = 0;
+int biasLimit = 100;
+const int constantBias = -20;
 
 void test()
 {
-  IRReading ir = MouseIR::read_all_callibrated();
-  int LS = ir.left;
-  int RS = ir.left;
-  int turn = ir.leftForward;
-  
-  int bias = (LS - RS)/2;
-  
-  if(turn>100){
-    mouse.run_motors(-64,64);
-  }else{
-    //Forward
-    mouse.run_motors(64 + bias,64 - bias);
-  }
+    Serial.println(digitalRead(a));
+    return;
+
+    IRReading sensors = MouseIR::read_all_callibrated();
+    Serial.print(sensors.leftSide);
+    Serial.print(";");
+    Serial.print(sensors.leftAngled);
+    Serial.print(";");
+    Serial.print(sensors.leftForward);
+    Serial.print(";");
+    Serial.print(sensors.rightSide);
+    Serial.print(";");
+    Serial.print(sensors.rightAngled);
+    Serial.print(";");
+    Serial.print(sensors.rightForward);
+    Serial.println();
+    delay(50);
+    return;
+    sensors.serialPrintValues();
+
+    bias += ((int) (sensors.leftSide + sensors.leftAngled)) - ((int) (sensors.rightSide + sensors.rightAngled)) + bias + bias;
+    bias /= 4;
+    bias = constrain(bias, -biasLimit, biasLimit);
+
+    Serial.print("Bias: ");
+    Serial.println(bias);
+
+    bias = 0;
+
+    mouse.run_motors(100 + (bias / 3) + constantBias, 100 - (bias / 3) - constantBias);
+
+    delay(100);
 }

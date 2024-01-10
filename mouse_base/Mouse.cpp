@@ -38,7 +38,7 @@ Mouse::Mouse(void)
   
 void Mouse::run_motors(int left, int right)
 {
-    left *= -1;
+    right *= -1;
 
     if (left == 0)
     {

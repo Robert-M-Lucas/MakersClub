@@ -20,8 +20,6 @@ public:
 
     static IRReading difference(IRReading before, IRReading after);
 
-    IRReading scale(unsigned maxValue);
-
     void serialPrintValues();
 };
 
