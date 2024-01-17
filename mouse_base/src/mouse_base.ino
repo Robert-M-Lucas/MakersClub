@@ -18,15 +18,13 @@ void setup() {
     // pinMode(a, INPUT);
 }
 
-IRCalibration calibration[6];
+IRCalibration calibrations[6];
 
 bool calibrated = false;
 
 void loop()
 {
     if (!calibrated) {
-        const IRReading sensors = MouseIR::read_all_calibrated();
-
         if (Serial.available()) {
             int i = 0;
             unsigned value = 0;
@@ -43,15 +41,16 @@ void loop()
 
                 if (c == ';') {
                     if (i % 2 == 0) {
-                        calibration[i/2].floor = value;
+                        calibrations[i/2].floor = value;
                     }
                     else {
-                        calibration[i/2].ceiling = value;
+                        calibrations[i/2].ceiling = value;
                     }
                     i++;
                     value = 0;
                     if (i == 12) {
                         calibrated = true;
+                        Serial.println("Calibration complete");
                         return;
                     }
                 }
@@ -62,13 +61,22 @@ void loop()
             }
         }
 
+        const IRReading sensors = MouseIR::read_all_calibrated();
         // Output in code-readable way
         sensors.serialOutputValues();
         delay(50);
         return;
     }
+    else {
+        IRReading sensors = MouseIR::read_all_calibrated();
+        Serial.println("Sensors before calibration:");
+        sensors.serialPrettyPrintValues();
+        sensors.calibrate(calibrations);
+        Serial.println("After:");
+        sensors.serialPrettyPrintValues();
 
 
+    }
 }
 
 

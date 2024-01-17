@@ -24,6 +24,8 @@ public:
 
     static IRReading difference(const IRReading &before, const IRReading &after);
 
+    void calibrate(const IRCalibration* calibrations);
+
     void serialPrettyPrintValues() const;
 
     void serialOutputValues() const;
