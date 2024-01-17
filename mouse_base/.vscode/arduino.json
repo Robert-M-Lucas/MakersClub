@@ -1,6 +1,0 @@
-{
-    "board": "arduino:avr:leonardo",
-    "programmer": "avrispmkii",
-    "sketch": "mouse_base.ino",
-    "port": "/dev/ttyACM0"
-}

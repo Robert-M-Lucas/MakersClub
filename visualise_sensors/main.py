@@ -73,7 +73,7 @@ line_centre = (WIDTH / 2, HEIGHT - 20)
 print("""\
 Use Left and Right Arrows to select a sensor to configure
 Use F/G to adjust sensor floor
-Use C/V to adjust sensor ceiling
+Use C/V to adjust sensor ceiling or A to set it to the current sensor reading
 Press Enter to send config to mouse\
 """)
 
@@ -95,7 +95,11 @@ while run:
             elif event.key == pygame.K_RIGHT:
                 selected = min(5, selected + 1)
             elif event.key == pygame.K_RETURN:
-                print("Sending data to mouse not implemented")
+                for i in (0, 1, 2, 5, 4, 3):
+                    ser.write(bytes(f"{sensors[i].floor}", encoding='ascii'))
+                    ser.write(b";")
+                    ser.write(bytes(f"{sensors[i].ceiling}", encoding='ascii'))
+                    ser.write(b";")
             elif event.key == pygame.K_f:
                 sensors[selected].floor = max(0, sensors[selected].floor - mul)
             elif event.key == pygame.K_c:
@@ -135,7 +139,13 @@ while run:
         by = ay + ((sensor.inv_sqr / 1.5) * sensor.y_mul)
 
         pygame.draw.line(screen, (0, 0, 0), (ax, ay), (bx, by), width=5)
+
         points.append((bx, by))
+
+        bx = ax + ((sensor.reading / 1.5) * sensor.x_mul)
+        by = ay + ((sensor.reading / 1.5) * sensor.y_mul)
+
+        pygame.draw.line(screen, (0, 255, 255), (ax, ay), (bx, by), width=2)
 
     for i in range(len(points) - 1):
         pygame.draw.line(screen, (255, 0, 0), points[i], points[i + 1])
