@@ -1,7 +1,7 @@
 #ifndef Controller_h
 #define Controller_h
 
-struct Steps{
+struct Steps {
   int left;
   int right;
   int lengthT;

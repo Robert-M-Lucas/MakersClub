@@ -18,40 +18,60 @@ void setup() {
     // pinMode(a, INPUT);
 }
 
-void test();
+IRCalibration calibration[6];
+
+bool calibrated = false;
 
 void loop()
 {
-    test();
+    if (!calibrated) {
+        const IRReading sensors = MouseIR::read_all_calibrated();
+
+        if (Serial.available()) {
+            int i = 0;
+            unsigned value = 0;
+            char temp[] = {'x', '\0'};
+            while (true) {
+                const int read = Serial.read();
+
+                if (value == -1) {
+                    Serial.println("Waiting for data");
+                    continue;
+                }
+
+                const char c = static_cast<char>(read);
+
+                if (c == ';') {
+                    if (i % 2 == 0) {
+                        calibration[i/2].floor = value;
+                    }
+                    else {
+                        calibration[i/2].ceiling = value;
+                    }
+                    i++;
+                    value = 0;
+                    if (i == 12) {
+                        calibrated = true;
+                        return;
+                    }
+                }
+
+                temp[0] = c;
+                value *= 10;
+                value += atoi(temp);
+            }
+        }
+
+        // Output in code-readable way
+        sensors.serialOutputValues();
+        delay(50);
+        return;
+    }
+
+
 }
 
-int bias = 0;
-int biasLimit = 100;
-constexpr int constantBias = -20;
 
-void test()
-{
-    Serial.println(digitalRead(a));
-    return;
 
-    IRReading sensors = MouseIR::read_all_calibrated();
-    // Output in code-readable way
-    sensors.serialOutputValues();
-    delay(50);
-    return;
 
-    sensors.serialPrettyPrintValues();
 
-    bias += ((int) (sensors.leftSide + sensors.leftAngled)) - ((int) (sensors.rightSide + sensors.rightAngled)) + bias + bias;
-    bias /= 4;
-    bias = constrain(bias, -biasLimit, biasLimit);
-
-    Serial.print("Bias: ");
-    Serial.println(bias);
-
-    bias = 0;
-
-    mouse.run_motors(100 + (bias / 3) + constantBias, 100 - (bias / 3) - constantBias);
-
-    delay(100);
-}

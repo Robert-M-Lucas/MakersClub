@@ -14,24 +14,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mouse_base.iml" beforeDir="false" />
+    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Updated project structure to be compatible with CLion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/arduino.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mouse.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mouse.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MouseIR.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MouseIR.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MouseIRExample.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pins.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mouse_base.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mouse.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseIR.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseIR.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mouse_base.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouse_base.ino" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +41,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.platformio/packages/framework-arduino-avr/cores/arduino/USBAPI.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Mouse.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PlatformioLocalSettings">
@@ -135,11 +126,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705486163157</updated>
-      <workItem from="1705486164302" duration="521000" />
+      <workItem from="1705486164302" duration="2530000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated project structure to be compatible with CLion">
+      <option name="closed" value="true" />
+      <created>1705486891243</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705486891243</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated project structure to be compatible with CLion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated project structure to be compatible with CLion" />
   </component>
 </project>

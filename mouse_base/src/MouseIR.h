@@ -7,8 +7,12 @@ enum SensorDirection {
     Angle = 3
 };
 
-class IRReading
-{
+struct IRCalibration {
+    unsigned floor;
+    unsigned ceiling;
+};
+
+class IRReading {
 public:
     unsigned leftSide;
     unsigned leftAngled;

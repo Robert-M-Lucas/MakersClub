@@ -44,11 +44,11 @@ void IRReading::serialOutputValues() const {
     Serial.print(";");
     Serial.print(leftForward);
     Serial.print(";");
-    Serial.print(rightSide);
+    Serial.print(rightForward);
     Serial.print(";");
     Serial.print(rightAngled);
     Serial.print(";");
-    Serial.print(rightForward);
+    Serial.print(rightSide);
     Serial.println();
 }
 

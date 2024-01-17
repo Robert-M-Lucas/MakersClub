@@ -4,8 +4,7 @@
 #include "Mouse.h"
 #include "Pins.h"
 
-Mouse::Mouse()
-{
+Mouse::Mouse() {
     pinMode(MSLEEP_PIN, OUTPUT);
     digitalWrite(MSLEEP_PIN, 0);
 
@@ -38,8 +37,7 @@ Mouse::Mouse()
     pinMode(SEN_RF,INPUT);
 }
   
-void Mouse::run_motors(int left, int right)
-{
+void Mouse::run_motors(const int left, int right) {
     right *= -1;
 
     if (left == 0)
