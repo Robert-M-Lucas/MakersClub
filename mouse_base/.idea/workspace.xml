@@ -14,12 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Started implementing calibration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseIR.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseIR.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mouse_base.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouse_base.ino" afterDir="false" />
-    </list>
+    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Continued implementing calibration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705486163157</updated>
-      <workItem from="1705486164302" duration="3760000" />
+      <workItem from="1705486164302" duration="4373000" />
     </task>
     <task id="LOCAL-00001" summary="Updated project structure to be compatible with CLion">
       <option name="closed" value="true" />
@@ -142,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705492421511</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Continued implementing calibration">
+      <option name="closed" value="true" />
+      <created>1705493303449</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705493303449</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +154,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated project structure to be compatible with CLion" />
     <MESSAGE value="Started implementing calibration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started implementing calibration" />
+    <MESSAGE value="Continued implementing calibration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continued implementing calibration" />
   </component>
 </project>

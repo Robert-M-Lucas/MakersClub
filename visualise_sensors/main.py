@@ -21,7 +21,7 @@ class SensorConfig:
 
     def update(self):
         self.scaled = int((max(0, self.reading - self.floor) / (self.ceiling - self.floor)) * 1023)
-        inv_sqr_min, inv_sqr_max = math.sqrt(1 / 1024), 1
+        inv_sqr_min, inv_sqr_max = math.sqrt(1 / 1023), 1
         scaled = max(1, self.scaled)
         inv_sqr = math.sqrt(1 / scaled)
         self.inv_sqr = int((inv_sqr - inv_sqr_min) / (inv_sqr_max - inv_sqr_min) * 1023)
@@ -36,7 +36,7 @@ if not SPOOF_DATA:
 else:
     ser = None
 
-pygame.init()  # Intialise the library
+pygame.init()  # Initialise the library
 
 WIDTH, HEIGHT = 1500, 1000
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
