@@ -3,6 +3,8 @@ import math
 import pygame
 import serial
 
+# ! Doesn't work well with Python 3.12 !
+
 ser = serial.Serial(port="/dev/ttyACM1")
 
 pygame.init() # intialize the library
