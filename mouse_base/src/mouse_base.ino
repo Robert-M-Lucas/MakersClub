@@ -1,4 +1,5 @@
 #include <FastLED.h>
+
 #include "Pins.h"
 #include "Mouse.h"
 #include "MouseIR.h"
@@ -11,11 +12,13 @@ uint8_t a = MAG_ENCA;
 
 void setup() { 
     // configure the addressable led
-    FastLED.addLeds<WS2812B, LED_PIN, GRB>(addressable_led, 1);
+    CFastLED::addLeds<WS2812B, LED_PIN, GRB>(addressable_led, 1);
 
     Serial.begin(9600);
     // pinMode(a, INPUT);
 }
+
+void test();
 
 void loop()
 {
@@ -24,29 +27,20 @@ void loop()
 
 int bias = 0;
 int biasLimit = 100;
-const int constantBias = -20;
+constexpr int constantBias = -20;
 
 void test()
 {
     Serial.println(digitalRead(a));
     return;
 
-    IRReading sensors = MouseIR::read_all_callibrated();
-    Serial.print(sensors.leftSide);
-    Serial.print(";");
-    Serial.print(sensors.leftAngled);
-    Serial.print(";");
-    Serial.print(sensors.leftForward);
-    Serial.print(";");
-    Serial.print(sensors.rightSide);
-    Serial.print(";");
-    Serial.print(sensors.rightAngled);
-    Serial.print(";");
-    Serial.print(sensors.rightForward);
-    Serial.println();
+    IRReading sensors = MouseIR::read_all_calibrated();
+    // Output in code-readable way
+    sensors.serialOutputValues();
     delay(50);
     return;
-    sensors.serialPrintValues();
+
+    sensors.serialPrettyPrintValues();
 
     bias += ((int) (sensors.leftSide + sensors.leftAngled)) - ((int) (sensors.rightSide + sensors.rightAngled)) + bias + bias;
     bias /= 4;

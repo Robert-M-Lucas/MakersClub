@@ -1,8 +1,10 @@
-#include "MouseIR.h"
-#include "Pins.h"
+#include <Arduino.h>
 #include <FastLED.h>
 
-unsigned sub_or_zero(unsigned a, unsigned b) {
+#include "MouseIR.h"
+#include "Pins.h"
+
+unsigned sub_or_zero(const unsigned a, const unsigned b) {
     if (a > b) {
         return 0;
     }
@@ -19,8 +21,7 @@ unsigned sub_or_zero(unsigned a, unsigned b) {
 //     rightForward = constrain(map(rightForward, 0, maxValue, 0, 1024), 0, 1024);
 // }
 
-void IRReading::serialPrintValues()
-{
+void IRReading::serialPrettyPrintValues() const {
     Serial.print("Left Side: ");
     Serial.print(leftSide);
     Serial.print("| Left Angle: ");
@@ -36,7 +37,22 @@ void IRReading::serialPrintValues()
     Serial.println(rightForward);
 }
 
-IRReading IRReading::difference(IRReading before, IRReading after)
+void IRReading::serialOutputValues() const {
+    Serial.print(leftSide);
+    Serial.print(";");
+    Serial.print(leftAngled);
+    Serial.print(";");
+    Serial.print(leftForward);
+    Serial.print(";");
+    Serial.print(rightSide);
+    Serial.print(";");
+    Serial.print(rightAngled);
+    Serial.print(";");
+    Serial.print(rightForward);
+    Serial.println();
+}
+
+IRReading IRReading::difference(const IRReading &before, const IRReading &after)
 {
     return IRReading {
         sub_or_zero(before.leftSide, after.leftSide),
@@ -49,7 +65,7 @@ IRReading IRReading::difference(IRReading before, IRReading after)
     };
 }
 
-void MouseIR::enable_ir(SensorDirection direction)
+void MouseIR::enable_ir(const SensorDirection direction)
 {
   // Forward
   if (direction == SensorDirection::Forward)
@@ -71,42 +87,42 @@ void MouseIR::enable_ir(SensorDirection direction)
 
 IRReading MouseIR::read_all_ir()
 {
-    unsigned leftSide = analogRead(SEN_LS);
-    unsigned leftAngled = analogRead(SEN_LA);
-    unsigned leftForward = analogRead(SEN_LF);
+    const unsigned leftSide = analogRead(SEN_LS);
+    const unsigned leftAngled = analogRead(SEN_LA);
+    const unsigned leftForward = analogRead(SEN_LF);
 
-    unsigned rightSide = analogRead(SEN_RS);
-    unsigned rightAngled = analogRead(SEN_RA);
-    unsigned rightForward = analogRead(SEN_RF);
+    const unsigned rightSide = analogRead(SEN_RS);
+    const unsigned rightAngled = analogRead(SEN_RA);
+    const unsigned rightForward = analogRead(SEN_RF);
 
     return IRReading { leftSide, leftAngled, leftForward, rightSide, rightAngled, rightForward };
 }
 
-IRReading MouseIR::read_all_callibrated()
+IRReading MouseIR::read_all_calibrated()
 {
-    IRReading before = read_all_ir();
+    const IRReading before = read_all_ir();
 
     enable_ir(SensorDirection::Side);
-    unsigned leftSide = analogRead(SEN_LS);
-    unsigned rightSide = analogRead(SEN_RS);
+    const unsigned leftSide = analogRead(SEN_LS);
+    const unsigned rightSide = analogRead(SEN_RS);
     disable_ir(SensorDirection::Side);
 
     enable_ir(SensorDirection::Angle);
-    unsigned leftAngled = analogRead(SEN_LA);
-    unsigned rightAngled = analogRead(SEN_RA);
+    const unsigned leftAngled = analogRead(SEN_LA);
+    const unsigned rightAngled = analogRead(SEN_RA);
     disable_ir(SensorDirection::Angle);
 
     enable_ir(SensorDirection::Forward);
-    unsigned leftForward = analogRead(SEN_LF);
-    unsigned rightForward = analogRead(SEN_RF);
+    const unsigned leftForward = analogRead(SEN_LF);
+    const unsigned rightForward = analogRead(SEN_RF);
     disable_ir(SensorDirection::Forward);
 
-    IRReading after = {leftSide, leftAngled, leftForward, rightSide, rightAngled, rightForward};
+    const IRReading after = {leftSide, leftAngled, leftForward, rightSide, rightAngled, rightForward};
 
     return IRReading::difference(before, after);
 }
 
-void MouseIR::disable_ir(SensorDirection direction)
+void MouseIR::disable_ir(const SensorDirection direction)
 {
   if (direction == SensorDirection::Forward)
   {

@@ -18,9 +18,11 @@ public:
     unsigned rightAngled;
     unsigned rightForward;
 
-    static IRReading difference(IRReading before, IRReading after);
+    static IRReading difference(const IRReading &before, const IRReading &after);
 
-    void serialPrintValues();
+    void serialPrettyPrintValues() const;
+
+    void serialOutputValues() const;
 };
 
 
@@ -29,7 +31,7 @@ namespace MouseIR {
     void disable_ir(SensorDirection direction);
 
     IRReading read_all_ir();
-    IRReading read_all_callibrated();
+    IRReading read_all_calibrated();
 };
 
 #endif

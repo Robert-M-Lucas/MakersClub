@@ -2,7 +2,7 @@
 
 
 void loop() {
-    IRReading sensors = MouseIR::read_all_callibrated();
+    IRReading sensors = MouseIR::read_all_calibrated();
 
     sensors.leftSide;
     sensors.rightSide;
