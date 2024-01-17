@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="mouse_base" targetName="PlatformIO" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/export_arduino.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/arduino.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mouse.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mouse.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MouseIR.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MouseIR.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MouseIRExample.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pins.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/boards.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Caterina-BathMouse.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/ConfigDescriptor.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Descriptors.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/DeviceStandardReq.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Device_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/EndpointStream_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Endpoint_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Events.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/HIDParser.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/HostStandardReq.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Host_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/PipeStream_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/Pipe_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/USBController_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/USBInterrupt_AVR8.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/.dep/USBTask.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.eep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.lss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina-BathMouse.sym" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Caterina.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Descriptors.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Descriptors.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Descriptors.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Descriptors.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/bootloaders/caterina/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Arduino.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/CDC.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial0.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/HardwareSerial_private.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/IPAddress.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/IPAddress.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/PluggableUSB.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/PluggableUSB.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Print.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Print.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Printable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Server.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Stream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Stream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Tone.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/USBAPI.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/USBCore.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/USBCore.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/USBDesc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/Udp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/WCharacter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/WInterrupts.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/WMath.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/WString.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/WString.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/abi.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/binary.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/hooks.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/new.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/new.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring_analog.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring_digital.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring_private.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring_pulse.S" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring_pulse.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/cores/arduino/wiring_shift.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/arduinoISP/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/Arduino-COMBINED-dfu-usbserial-atmega16u2-Mega2560-Rev3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/Arduino-COMBINED-dfu-usbserial-atmega16u2-MegaADK-Rev3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/Arduino-COMBINED-dfu-usbserial-atmega16u2-Uno-Rev3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/Genuino-COMBINED-dfu-usbserial-atmega16u2-Mega2560-R3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/Genuino-COMBINED-dfu-usbserial-atmega16u2-Uno-R3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/MEGA-dfu_and_usbserial_combined.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/UNO-dfu_and_usbserial_combined.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/Arduino-usbdfu.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/Arduino-usbdfu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/Board/LEDs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/Descriptors.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/Descriptors.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbdfu/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial-atmega16u2-Mega2560-Rev3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial-atmega16u2-MegaADK-Rev3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial-atmega16u2-Uno-Rev3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial-mega.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial-uno.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Arduino-usbserial.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Board/LEDs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Descriptors.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Descriptors.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Genuino-usbserial-atmega16u2-Mega2560-R3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Genuino-usbserial-atmega16u2-Uno-R3.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/Lib/LightweightRingBuff.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/atmegaxxu2/arduino-usbserial/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/binary/wifiHD.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/binary/wifiHD.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/binary/wifiHD_2_1.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/binary/wifi_dnld.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/binary/wifi_dnld.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/binary/wifi_dnld_2_1.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/scripts/ArduinoWifiShield_upgrade.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/scripts/ArduinoWifiShield_upgrade_mac.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/Release/wifiHD.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/Release/wifiHD.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/CONFIG/conf_access.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/CONFIG/conf_at45dbx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/CONFIG/conf_ebi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/CONFIG/conf_sd_mmc_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/ASM/trampoline.x" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/ARDUINO/arduino.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/ARDUINO/led.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/ARDUINO/led.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/EVK1105/evk1105.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/EVK1105/led.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/EVK1105/led.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/board.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/BOARDS/board.h.my" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx_mem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx_mem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR1/GCC/lib_ucr1_hd_sdio_v2.7.0.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR1/GCC/lib_ucr1_hd_spi_v2.7.0.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR1/GCC/lib_ucr1_hd_wl_sta_intwpa_v2.7.0.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR2/GCC/lib_ucr2_hd_sdio_v2.7.0.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR2/GCC/lib_ucr2_hd_spi_v2.7.0.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR2/GCC/lib_ucr2_hd_wl_sta_intwpa_v2.7.0.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/revision.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/wl_api.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/wl_fw.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/wl_os.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/wl_sdio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/wl_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/wlap_api.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/CPU/CYCLE_COUNTER/cycle_counter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/EBI/SMC/smc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/EBI/SMC/smc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/EIC/eic.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/EIC/eic.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/FLASHC/flashc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/FLASHC/flashc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/GPIO/gpio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/GPIO/gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/INTC/exception.x" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/INTC/intc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/INTC/intc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PDCA/pdca.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PDCA/pdca.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm_conf_clocks.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/power_clocks_lib.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/power_clocks_lib.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/RTC/rtc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/RTC/rtc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/SPI/spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/SPI/spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/TC/tc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/TC/tc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/USART/usart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/DRIVERS/USART/usart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/DELAY/delay.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/DELAY/delay.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/dhcp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/dns.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/autoip.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/icmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/igmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/inet.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/inet_chksum.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/ip.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/ip_addr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/ipv4/ip_frag.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/mem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/memp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/netif.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/pbuf.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/raw.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/stats.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/tcp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/tcp_in.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/tcp_out.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/core/udp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/autoip.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/icmp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/igmp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/inet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/inet_chksum.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/ip.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/ip_addr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/ipv4/lwip/ip_frag.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/api.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/api_msg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/arch.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/debug.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/def.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/dhcp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/dns.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/err.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/init.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/mem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/memp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/memp_std.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/netbuf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/netdb.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/netif.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/netifapi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/opt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/pbuf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/raw.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/sio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/snmp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/snmp_asn1.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/snmp_msg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/snmp_structs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/sockets.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/stats.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/sys.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/tcp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/tcpip.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/udp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/netif/etharp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/netif/loopif.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/netif/ppp_oe.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/netif/slipif.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/netif/etharp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/netif/loopif.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-port-1.3.2/HD/if/include/arch/cc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-port-1.3.2/HD/if/include/arch/perf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-port-1.3.2/HD/if/include/lwipopts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-port-1.3.2/HD/if/include/netif/wlif.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-port-1.3.2/HD/if/netif/wlif.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-port-1.3.2/HD/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/MEMORY/CTRL_ACCESS/ctrl_access.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/MEMORY/CTRL_ACCESS/ctrl_access.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/debug.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/debug.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/print_funcs.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/print_funcs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_cpu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_exceptions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_interrupts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_io.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_usart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/libnewlib_addons-at32ucr2-speed_opt.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LINKER_SCRIPTS/AT32UC3A/0512/GCC/link_uc3a0512.lds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/LINKER_SCRIPTS/AT32UC3A/1256/GCC/link_uc3a1256.lds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/mrepeat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/preprocessor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/stringz.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/tpaste.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/STARTUP_FILES/GCC/crt0.x" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/conf_isp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/UTILS/parts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ard_spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ard_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ard_tcp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ard_tcp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ard_utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ard_utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/avr32_spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/board_init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/board_init.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/cmd_wl.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/cmd_wl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/console.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/console.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/debug.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/fw_download.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/fw_download_extflash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/lwip_setup.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/lwip_setup.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/lwipopts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/nvram.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/nvram.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/owl_os.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ping.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/ping.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/printf-stdarg.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/printf-stdarg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/timer.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/timer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/top_defs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/trace.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/util.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/util.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/wifi_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/wl_cm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/wl_cm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/src/wl_definitions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifiHD/wifiHD.cproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/Release/wifi_dnld.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/CONFIG/conf_access.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/CONFIG/conf_at45dbx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/Doc/SPB104 product brief.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/Doc/gettingstarted.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/ASM/trampoline.x" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/ARDUINO/arduino.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/ARDUINO/led.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/ARDUINO/led.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/EVK1105/evk1105.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/EVK1105/led.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/EVK1105/led.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/board.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/BOARDS/board.h.ori" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx_mem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx_mem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/FLASHC/flashc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/FLASHC/flashc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/GPIO/gpio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/GPIO/gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/INTC/exception.x" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/INTC/intc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/INTC/intc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm_conf_clocks.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/power_clocks_lib.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/PM/power_clocks_lib.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/SPI/spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/SPI/spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/USART/usart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/DRIVERS/USART/usart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/SERVICES/MEMORY/CTRL_ACCESS/ctrl_access.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/SERVICES/MEMORY/CTRL_ACCESS/ctrl_access.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/debug.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/debug.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/print_funcs.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/DEBUG/print_funcs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_cpu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_exceptions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_interrupts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_io.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/INCLUDE/nlao_usart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/libnewlib_addons-at32ucr2-speed_opt.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LINKER_SCRIPTS/AT32UC3A/0512/GCC/link_uc3a0512.lds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LINKER_SCRIPTS/AT32UC3A/1256/GCC/link_uc3a1256.lds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/mrepeat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/preprocessor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/stringz.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/tpaste.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/STARTUP_FILES/GCC/crt0.x" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/conf_isp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/parts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/clocks.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/clocks.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/flash_fw.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/nor_flash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/nor_flash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/printf-stdarg.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/printf-stdarg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/startup.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/startup.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/src/wl_fw.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifi_dnld/wifi_dnld.cproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/firmwares/wifishield/wifishield.atsln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_clear/eeprom_clear.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_crc/eeprom_crc.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_get/eeprom_get.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_iteration/eeprom_iteration.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_put/eeprom_put.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_read/eeprom_read.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_update/eeprom_update.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/examples/eeprom_write/eeprom_write.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/library.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/EEPROM/src/EEPROM.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/HID/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/HID/library.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/HID/src/HID.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/HID/src/HID.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SPI/examples/BarometricPressureSensor/BarometricPressureSensor.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SPI/examples/DigitalPotControl/DigitalPotControl.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SPI/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SPI/library.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SPI/src/SPI.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SPI/src/SPI.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SoftwareSerial/examples/SoftwareSerialExample/SoftwareSerialExample.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SoftwareSerial/examples/TwoPortReceive/TwoPortReceive.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SoftwareSerial/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SoftwareSerial/library.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/SoftwareSerial/src/SoftwareSerial.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/examples/SFRRanger_reader/SFRRanger_reader.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/examples/digital_potentiometer/digital_potentiometer.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/examples/master_reader/master_reader.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/examples/master_writer/master_writer.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/examples/slave_receiver/slave_receiver.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/examples/slave_sender/slave_sender.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/library.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/src/Wire.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/src/Wire.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/src/utility/twi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/libraries/Wire/src/utility/twi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/platform.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/programmers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/variants/bathmouse/pins_arduino.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bathmouse/avr/variants/leonardo/pins_arduino.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mouse_base.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/.idea/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/include/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/lib/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/platformio.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/.vscode/arduino.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/Controller.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/Controller.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/Mouse.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/Mouse.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/MouseIR.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/MouseIR.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/Pins.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/src/mouse_base.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mouse_base_new/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../visualise_sensors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../visualise_sensors/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="leonardo" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.platformio/packages/framework-arduino-avr/cores/arduino/Arduino.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Mouse.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="PlatformioLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="mouse_base" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="mouse_base" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="3" />
+    <option name="productBranch" value="Nova" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2b4tQTiSZEKjULEToinNb8CYxxL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.export_arduino.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/robertlucas/MakersClub/MakersClub/mouse_base",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.export_arduino">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="export_arduino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mouse_base" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/export_arduino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mouse_base" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mouse_base" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mouse_base" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PlatformIO.PlatformIO" />
+      <item itemvalue="Python.export_arduino" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.export_arduino" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="" />
+      <created>1705486163157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705486163157</updated>
+      <workItem from="1705486164302" duration="521000" />
+      <workItem from="1705500187398" duration="241000" />
+      <workItem from="1705508444493" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/Mouse.cpp</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
