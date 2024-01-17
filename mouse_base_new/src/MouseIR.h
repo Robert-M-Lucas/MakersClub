@@ -7,8 +7,12 @@ enum SensorDirection {
     Angle = 3
 };
 
-class IRReading
-{
+struct IRCalibration {
+    unsigned floor;
+    unsigned ceiling;
+};
+
+class IRReading {
 public:
     unsigned leftSide;
     unsigned leftAngled;
@@ -19,6 +23,8 @@ public:
     unsigned rightForward;
 
     static IRReading difference(const IRReading &before, const IRReading &after);
+
+    void calibrate(const IRCalibration* calibrations);
 
     void serialPrettyPrintValues() const;
 

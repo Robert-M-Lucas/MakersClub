@@ -65,6 +65,27 @@ IRReading IRReading::difference(const IRReading &before, const IRReading &after)
     };
 }
 
+unsigned apply_calibration(const unsigned before, const IRCalibration calibration) {
+    // Scale to floor and ceiling
+    float scaled = max(0.0, static_cast<float>(before) - static_cast<float>(calibration.floor)) / (calibration.ceiling - calibration.floor) * 1023.0;
+    // Get inverse square (inverse square law)
+    constexpr float inv_sqr_min = sqrt(1.0 / 1023.0);
+    constexpr float inv_sqr_max = 1;
+    scaled = max(1, scaled);
+    const float inv_sqr = sqrt(1.0 / scaled);
+    // Re-scale to range - 0 -> 1023
+    return static_cast<unsigned>((inv_sqr - inv_sqr_min) / (inv_sqr_max - inv_sqr_min) * 1023.0);
+}
+
+void IRReading::calibrate(const IRCalibration *calibrations) {
+    leftSide = apply_calibration(leftSide, calibrations[0]);
+    leftAngled = apply_calibration(leftAngled, calibrations[1]);
+    leftForward = apply_calibration(leftForward, calibrations[2]);
+    rightForward = apply_calibration(rightForward, calibrations[3]);
+    rightAngled = apply_calibration(rightAngled, calibrations[4]);
+    rightSide = apply_calibration(rightSide, calibrations[5]);
+}
+
 void MouseIR::enable_ir(const SensorDirection direction)
 {
   // Forward
