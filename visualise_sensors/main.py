@@ -20,7 +20,7 @@ class SensorConfig:
     inv_sqr: int = 0
 
     def update(self):
-        self.scaled = int((max(0, self.reading - self.floor) / (self.ceiling - self.floor)) * 1023)
+        self.scaled = int((max(0, min(self.reading, self.ceiling) - self.floor) / (self.ceiling - self.floor)) * 1023)
         inv_sqr_min, inv_sqr_max = math.sqrt(1 / 1024), 1
         scaled = max(1, self.scaled)
         inv_sqr = math.sqrt(1 / scaled)
@@ -29,7 +29,7 @@ class SensorConfig:
 
 # ! Doesn't work well with Python 3.12 !
 
-SPOOF_DATA = True
+SPOOF_DATA = False
 
 if not SPOOF_DATA:
     ser = serial.Serial(port="/dev/ttyACM1")
@@ -99,11 +99,13 @@ while run:
             elif event.key == pygame.K_f:
                 sensors[selected].floor = max(0, sensors[selected].floor - mul)
             elif event.key == pygame.K_c:
-                sensors[selected].ceiling = max(0, sensors[selected].ceiling - mul)
+                sensors[selected].ceiling = max(1, sensors[selected].ceiling - mul)
             elif event.key == pygame.K_g:
                 sensors[selected].floor = min(1023, sensors[selected].floor + mul)
             elif event.key == pygame.K_v:
                 sensors[selected].ceiling = min(1023, sensors[selected].ceiling + mul)
+            elif event.key == pygame.K_a:
+                sensors[selected].ceiling = sensors[selected].reading
 
     screen.fill((255, 255, 255))
 
@@ -120,8 +122,14 @@ while run:
     else:
         data = [3 for _ in range(6)]
 
+    sensors[0].reading = data[0]
+    sensors[1].reading = data[1]
+    sensors[2].reading = data[2]
+    sensors[3].reading = data[5]
+    sensors[4].reading = data[4]
+    sensors[5].reading = data[4]
+
     for i in range(6):
-        sensors[i].reading = data[i]
         sensors[i].update()
 
     points = []
@@ -135,7 +143,13 @@ while run:
         by = ay + ((sensor.inv_sqr / 1.5) * sensor.y_mul)
 
         pygame.draw.line(screen, (0, 0, 0), (ax, ay), (bx, by), width=5)
+
         points.append((bx, by))
+
+        bx = ax + ((sensor.reading / 1.5) * sensor.x_mul)
+        by = ay + ((sensor.reading / 1.5) * sensor.y_mul)
+        pygame.draw.line(screen, (255, 0, 0), (ax, ay), (bx, by), width=1)
+
 
     for i in range(len(points) - 1):
         pygame.draw.line(screen, (255, 0, 0), points[i], points[i + 1])

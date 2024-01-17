@@ -1,0 +1,42 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+menu.cpu=Processor
+
+bathmouse.name=Bath Simple Mouse
+bathmouse.vid.0=0x1209
+bathmouse.pid.0=0xBC50
+bathmouse.vid.1=0x1209
+bathmouse.pid.1=0xBC50
+bathmouse.vid.2=0x1209
+bathmouse.pid.2=0xBC50
+bathmouse.vid.3=0x1209
+bathmouse.pid.3=0xBC50
+
+bathmouse.upload.tool=avrdude
+bathmouse.upload.protocol=avr109
+bathmouse.upload.maximum_size=28672
+bathmouse.upload.maximum_data_size=2560
+bathmouse.upload.speed=57600
+bathmouse.upload.disable_flushing=true
+bathmouse.upload.use_1200bps_touch=true
+bathmouse.upload.wait_for_upload_port=true
+
+bathmouse.bootloader.tool=avrdude
+bathmouse.bootloader.low_fuses=0xff
+bathmouse.bootloader.high_fuses=0xd8
+bathmouse.bootloader.extended_fuses=0xfd
+bathmouse.bootloader.file=caterina/Caterina-BathMouse.hex
+bathmouse.bootloader.unlock_bits=0x3F
+bathmouse.bootloader.lock_bits=0x2F
+
+bathmouse.build.mcu=atmega32u4
+bathmouse.build.f_cpu=16000000L
+bathmouse.build.vid=0x1209
+bathmouse.build.pid=0xBC50
+bathmouse.build.usb_product="Bath Simple Mouse"
+bathmouse.build.board=AVR_LEONARDO
+bathmouse.build.core=arduino
+bathmouse.build.variant=bathmouse
+bathmouse.build.extra_flags={build.usb_flags}
+
+
