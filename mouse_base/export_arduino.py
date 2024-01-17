@@ -1,7 +1,7 @@
 import shutil
 import os
 
-if input("This will delete mouse_base_export. Proceed? (Y/N)").lower() != "y":
+if input("This will delete mouse_base_export. Proceed? (Y/N): ").lower() != "y":
     exit(-1)
 
 shutil.rmtree("../mouse_base_export")
