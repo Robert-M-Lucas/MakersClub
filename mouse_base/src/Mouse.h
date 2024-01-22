@@ -1,10 +1,8 @@
-#ifndef Mouse_h
-#define Mouse_h
+#ifndef MOUSE_H
+#define MOUSE_H
 
 class Mouse {
 public:
-    Mouse();
-
-    static void run_motors(int left, int right);
+    static void initialiseAllSensors();
 };
 #endif

@@ -1,5 +1,5 @@
-#ifndef MouseIR_h
-#define MouseIR_h
+#ifndef MOUSEIR_H
+#define MOUSEIR_H
 
 enum SensorDirection {
     Forward = 1,
@@ -10,6 +10,16 @@ enum SensorDirection {
 struct IRCalibration {
     unsigned floor;
     unsigned ceiling;
+};
+
+struct IRCalibrationSet {
+    IRCalibration leftSide;
+    IRCalibration leftAngled;
+    IRCalibration leftForward;
+
+    IRCalibration rightSide;
+    IRCalibration rightAngled;
+    IRCalibration rightForward;
 };
 
 class IRReading {
@@ -24,7 +34,7 @@ public:
 
     static IRReading difference(const IRReading &before, const IRReading &after);
 
-    void calibrate(const IRCalibration* calibrations);
+    void calibrate(const IRCalibrationSet &calibrations);
 
     void serialPrettyPrintValues() const;
 
@@ -33,11 +43,14 @@ public:
 
 
 namespace MouseIR {
-    void enable_ir(SensorDirection direction);
-    void disable_ir(SensorDirection direction);
+    void enableIr(SensorDirection direction);
+    void disableIr(SensorDirection direction);
 
-    IRReading read_all_ir();
-    IRReading read_all_calibrated();
+    IRCalibrationSet getIrCalibrationsBlocking();
+
+    IRReading readAllIrRaw();
+    IRReading readAllIrRelative();
+    IRReading readAllIrCalibrated(const IRCalibrationSet &calibrations);
 };
 
 #endif

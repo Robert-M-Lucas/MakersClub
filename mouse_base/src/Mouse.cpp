@@ -4,11 +4,11 @@
 #include "Mouse.h"
 #include "Pins.h"
 
-Mouse::Mouse() {
+void Mouse::initialiseAllSensors() {
     pinMode(MSLEEP_PIN, OUTPUT);
     digitalWrite(MSLEEP_PIN, 0);
 
-    // conigure the motor drive pins.
+    // configure the motor drive pins.
     pinMode(MOTOR_A1, OUTPUT);
     pinMode(MOTOR_A2, OUTPUT);
     pinMode(MOTOR_B1, OUTPUT);
@@ -23,7 +23,7 @@ Mouse::Mouse() {
     //digitalWrite(IREMIT_FORWARD, OUTPUT);
     pinMode(IREMIT_ANGLE, OUTPUT);
     pinMode(IREMIT_SIDE, OUTPUT);
-    //pinMode(IREMIT_FORWARD, 0);
+    // pinMode(IREMIT_FORWARD, 0);
     PORTB &= ~(1<<0);  // turn-off forward led 
     digitalWrite(IREMIT_ANGLE, 0);
     digitalWrite(IREMIT_SIDE, 0);
@@ -35,35 +35,8 @@ Mouse::Mouse() {
     pinMode(SEN_RS,INPUT);
     pinMode(SEN_RA,INPUT);
     pinMode(SEN_RF,INPUT);
-}
-  
-void Mouse::run_motors(const int left, int right) {
-    right *= -1;
 
-    if (left == 0)
-    {
-      digitalWrite(MOTOR_A1, 0);
-      digitalWrite(MOTOR_A2, 0);
-    } else if (left > 0)
-    {
-      digitalWrite(MOTOR_A1, 0);
-      analogWrite(MOTOR_A2, left);
-    } else
-    {
-      digitalWrite(MOTOR_A1, -left);
-      analogWrite(MOTOR_A2, 0);
-    }
-    if (right == 0)
-    {
-      digitalWrite(MOTOR_B1, 0);
-      digitalWrite(MOTOR_B2, 0);
-    } else if (right > 0)
-    {
-      digitalWrite(MOTOR_B1, 0);
-      analogWrite(MOTOR_B2, right);
-    } else
-    {
-      digitalWrite(MOTOR_B1, -right);
-      analogWrite(MOTOR_B2, 0);
-    }
+    // hall effect sensors
+    pinMode(MAG_ENCA, INPUT);
+    pinMode(MAG_ENCB, INPUT);
 }

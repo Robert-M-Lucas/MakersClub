@@ -1,3 +1,6 @@
+#ifndef PINS_H
+#define PINS_H
+
 #define LED_PIN 7 //PE6
 
 #define MSLEEP_PIN 12 // PD6
@@ -19,3 +22,5 @@
 
 #define MAG_ENCA 4 // PD4
 #define MAG_ENCB 60 // PD5
+
+#endif

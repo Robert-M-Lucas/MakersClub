@@ -3,72 +3,40 @@
 #include "Pins.h"
 #include "Mouse.h"
 #include "MouseIR.h"
+#include "MouseMovement.h"
+
+// TODO: Is MSLEEP_PIN important
+/* TODO:
+ * What does Mouse::initialiseAllSensors() actually do to the IR emmitters and is the current IR code correctly
+ * enabling and disabling emmitters?
+ */
+// TODO: Test calibration step
+// TODO: Test movement with hall-effect sensors
+// TODO: What does Controller.h do?
 
 CRGB addressable_led[1];
 
-Mouse mouse;
+IRCalibrationSet ir_calibrations;
 
 void setup() {
+    Mouse::initialiseAllSensors();
+
     // configure the addressable led
     CFastLED::addLeds<WS2812B, LED_PIN, GRB>(addressable_led, 1);
 
     Serial.begin(9600);
+
+    Serial.println("Starting calibration - use calibration software to complete this step");
+    ir_calibrations = MouseIR::getIrCalibrationsBlocking();
+    Serial.println("Calibration complete");
 }
-
-IRCalibration calibrations[6];
-
-bool calibrated = false;
 
 void loop()
 {
-    if (!calibrated) {
-        if (Serial.available()) {
-            int i = 0;
-            unsigned value = 0;
-            char temp[] = {'x', '\0'};
-            while (true) {
-                const int read = Serial.read();
-
-                if (value == -1) {
-                    Serial.println("Waiting for data");
-                    continue;
-                }
-
-                const char c = static_cast<char>(read);
-
-                if (c == ';') {
-                    if (i % 2 == 0) {
-                        calibrations[i/2].floor = value;
-                    }
-                    else {
-                        calibrations[i/2].ceiling = value;
-                    }
-                    i++;
-                    value = 0;
-                    if (i == 12) {
-                        calibrated = true;
-                        Serial.println("Calibration complete");
-                        return;
-                    }
-                }
-
-                temp[0] = c;
-                value *= 10;
-                value += atoi(temp);
-            }
-        }
-
-        const IRReading sensors = MouseIR::read_all_calibrated();
-        // Output in code-readable way
-        sensors.serialOutputValues();
-        delay(50);
-        return;
-    }
-
-    IRReading sensors = MouseIR::read_all_calibrated();
+    IRReading sensors = MouseIR::readAllIrRelative();
     Serial.println("Sensors before calibration:");
     sensors.serialPrettyPrintValues();
-    sensors.calibrate(calibrations);
+    sensors.calibrate(ir_calibrations);
     Serial.println("After:");
     sensors.serialPrettyPrintValues();
 }

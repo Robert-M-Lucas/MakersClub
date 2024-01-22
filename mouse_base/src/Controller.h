@@ -1,5 +1,5 @@
-#ifndef Controller_h
-#define Controller_h
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
 
 struct Steps {
     int left;
