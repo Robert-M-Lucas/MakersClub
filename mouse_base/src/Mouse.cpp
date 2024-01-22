@@ -4,7 +4,7 @@
 #include "Mouse.h"
 #include "Pins.h"
 
-void Mouse::initialiseAllSensors() {
+void Mouse::initialiseAllIO() {
     pinMode(MSLEEP_PIN, OUTPUT);
     digitalWrite(MSLEEP_PIN, 0);
 

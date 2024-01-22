@@ -4,13 +4,6 @@
 #include "MouseIR.h"
 #include "Pins.h"
 
-unsigned sub_or_zero(const unsigned a, const unsigned b) {
-    if (a > b) {
-        return 0;
-    }
-    return b - a;
-}
-
 // void IRReading::scale(unsigned maxValue) {
 //     leftSide = constrain(map(leftSide, 0, maxValue, 0, 1024), 0, 1024);
 //     leftAngled = constrain(map(leftAngled, 0, maxValue, 0, 1024), 0, 1024);
@@ -55,13 +48,12 @@ void IRReading::serialOutputValues() const {
 IRReading IRReading::difference(const IRReading &before, const IRReading &after)
 {
     return IRReading {
-        sub_or_zero(before.leftSide, after.leftSide),
-        sub_or_zero(before.leftAngled, after.leftAngled),
-        sub_or_zero(before.leftForward, after.leftForward),
-
-        sub_or_zero(before.rightSide, after.rightSide),
-        sub_or_zero(before.rightAngled, after.rightAngled),
-        sub_or_zero(before.rightForward, after.rightForward),
+        before.leftSide > after.leftSide ? 0 : after.leftSide - before.leftSide,
+        before.leftAngled > after.leftAngled ? 0 : after.leftAngled - before.leftAngled,
+        before.leftForward > after.leftForward ? 0 : after.leftForward - before.leftForward,
+        before.rightSide > after.rightSide ? 0 : after.rightSide - before.rightSide,
+        before.rightAngled > after.rightAngled ? 0 : after.rightAngled - before.rightAngled,
+        before.rightForward > after.rightForward ? 0 : after.rightForward - before.rightForward,
     };
 }
 
@@ -69,10 +61,10 @@ unsigned apply_calibration(const unsigned before, const IRCalibration calibratio
     // Scale to floor and ceiling
     float scaled = max(0.0, static_cast<float>(before) - static_cast<float>(calibration.floor)) / (calibration.ceiling - calibration.floor) * 1023.0;
     // Get inverse square (inverse square law)
-    constexpr float inv_sqr_min = sqrt(1.0 / 1023.0);
+    constexpr float inv_sqr_min = sqrt(1.0f / 1023.0f);
     constexpr float inv_sqr_max = 1;
-    scaled = max(1, scaled);
-    const float inv_sqr = sqrt(1.0 / scaled);
+    scaled = max(1.0f, scaled);
+    const float inv_sqr = sqrt(1.0f / scaled);
     // Re-scale to range - 0 -> 1023
     return static_cast<unsigned>((inv_sqr - inv_sqr_min) / (inv_sqr_max - inv_sqr_min) * 1023.0);
 }
@@ -121,7 +113,7 @@ IRCalibrationSet MouseIR::getIrCalibrationsBlocking() {
     IRCalibrationSet calibrations = {};
 
     while (true) {
-        if (Serial.available()) {
+        if (Serial.available()) { // Receiving calibration
             unsigned i = 0;
             unsigned value = 0;
             char temp[] = {'x', '\0'};
@@ -134,9 +126,9 @@ IRCalibrationSet MouseIR::getIrCalibrationsBlocking() {
                 }
                 const char c = static_cast<char>(read);
 
-                if (c == ';') {
-                    const bool is_floor = i % 2 == 0;
-                    const unsigned sensor_index = i/2;
+                if (c == ';') { // Number completed
+                    const bool is_floor = i % 2 == 0; // floor;ceiling;floor;ceiling; etc.
+                    const unsigned sensor_index = i/2; // [0].f;[0].c;[1].f;[1].c etc.
                     IRCalibration *ir_calibration;
 
                     switch (sensor_index) {
@@ -157,21 +149,23 @@ IRCalibrationSet MouseIR::getIrCalibrationsBlocking() {
                     }
 
                     i++;
-                    if (i == 12) {
+                    if (i == 12) { // All values sent
                         return calibrations;
                     }
                     value = 0;
                 }
 
                 temp[0] = c; // Convert char to string
-                value *= 10;
+                value *= 10; // Shift one place value
                 value += atoi(temp); // Convert string to int
             }
         }
 
+        // Read IR sensors
         const IRReading sensors = readAllIrRelative();
         // Output in code-readable way
         sensors.serialOutputValues();
+        // Don't output faster than recipient can parse
         delay(50);
     }
 }

@@ -15,14 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/MouseMovement.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MouseMovement.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mouse.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MouseIR.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MouseIR.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseMovement.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseMovement.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pins.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pins.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
@@ -53,7 +51,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/.platformio/packages/framework-arduino-avr/cores/arduino/Arduino.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.platformio/packages/framework-arduino-avr/variants/leonardo/pins_arduino.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.platformio/packages/toolchain-atmelavr/avr/include/avr/iom32u4.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.platformio/packages/toolchain-atmelavr/avr/include/math.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.platformio/packages/toolchain-atmelavr/avr/include/stdlib.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Mouse.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PlatformioLocalSettings">
     <option name="availableProjects">
@@ -120,7 +124,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="PlatformIO.PlatformIO">
+  <component name="RunManager" selected="Python.export_arduino">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -179,7 +183,7 @@
       <workItem from="1705500187398" duration="241000" />
       <workItem from="1705508444493" duration="1733000" />
       <workItem from="1705852484433" duration="29000" />
-      <workItem from="1705951036378" duration="2999000" />
+      <workItem from="1705951036378" duration="6575000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -205,7 +209,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705535388940</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added untested movement based on hall-effect sensor readings and refactored code to make it more consistent">
+      <option name="closed" value="true" />
+      <created>1705955198163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705955198163</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update">
+      <option name="closed" value="true" />
+      <created>1705956744259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705956744259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +233,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added unversioned files" />
+    <MESSAGE value="Added untested movement based on hall-effect sensor readings and refactored code to make it more consistent" />
     <MESSAGE value="Update" />
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>

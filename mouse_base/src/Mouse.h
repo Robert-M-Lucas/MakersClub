@@ -3,6 +3,7 @@
 
 class Mouse {
 public:
-    static void initialiseAllSensors();
+    /// Initialises all IO pins
+    static void initialiseAllIO();
 };
 #endif

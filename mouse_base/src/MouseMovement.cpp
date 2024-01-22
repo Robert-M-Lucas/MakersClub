@@ -50,6 +50,7 @@ Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsR
         const bool left_reading = digitalRead(MAG_ENCA);
         const bool right_reading = digitalRead(MAG_ENCB);
 
+        // Every change in magnetism is 1 step
         if (left_reading != prev_left_reading) {
             left_remaining -= motor_dir_left;
         }
@@ -62,8 +63,8 @@ Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsR
         if (left_remaining * motor_dir_left <= 0 && right_remaining * motor_dir_right <= 0) { break; }
 
         runMotors(
-            left_remaining * motor_dir_left > 0 ? motor_dir_left * MOVEMENT_SPEED : 0,
-            right_remaining * motor_dir_right > 0 ? motor_dir_right * MOVEMENT_SPEED : 0
+            left_remaining * motor_dir_left > 0 ? motor_dir_left * static_cast<int>(MOVEMENT_SPEED) : 0,
+            right_remaining * motor_dir_right > 0 ? motor_dir_right * static_cast<int>(MOVEMENT_SPEED) : 0
         );
     }
 
@@ -91,6 +92,7 @@ bool MouseMovement::updateMovement() {
     const bool leftReading = digitalRead(MAG_ENCA);
     const bool rightReading = digitalRead(MAG_ENCB);
 
+    // Every change in magnetism is 1 step
     if (leftReading != prevLeftReading) {
         leftStepsRemaining -= motorDirectionLeft;
     }
