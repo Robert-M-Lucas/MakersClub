@@ -108,6 +108,10 @@ while run:
                 sensors[selected].floor = min(1023, sensors[selected].floor + mul)
             elif event.key == pygame.K_v:
                 sensors[selected].ceiling = min(1023, sensors[selected].ceiling + mul)
+            elif event.key == pygame.K_a:
+                sensors[selected].ceiling = sensors[selected].reading
+                selected = min(5, selected + 1)
+
 
     screen.fill((255, 255, 255))
 
