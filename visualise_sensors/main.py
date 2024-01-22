@@ -112,11 +112,9 @@ while run:
                 sensors[selected].ceiling = sensors[selected].reading
                 selected = min(5, selected + 1)
 
-
     screen.fill((255, 255, 255))
 
     if not SPOOF_DATA:
-
         while True:
             try:
                 data = [int(x) for x in ser.readline().strip().split(b';')]

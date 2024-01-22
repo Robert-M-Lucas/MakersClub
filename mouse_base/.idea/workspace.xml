@@ -14,15 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Update">
+    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Added comments and inline documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mouse.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseIR.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseIR.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseIR.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseMovement.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseMovement.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pins.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pins.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../visualise_sensors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../visualise_sensors/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,9 +119,9 @@
   }
 }</component>
   <component name="RunManager" selected="Python.export_arduino">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="export_arduino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -162,8 +156,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PlatformIO.PlatformIO" />
       <item itemvalue="Python.export_arduino" />
+      <item itemvalue="PlatformIO.PlatformIO" />
     </list>
     <recent_temporary>
       <list>
@@ -183,7 +177,8 @@
       <workItem from="1705500187398" duration="241000" />
       <workItem from="1705508444493" duration="1733000" />
       <workItem from="1705852484433" duration="29000" />
-      <workItem from="1705951036378" duration="6575000" />
+      <workItem from="1705951036378" duration="6926000" />
+      <workItem from="1705960989448" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -225,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705956744259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added comments and inline documentation">
+      <option name="closed" value="true" />
+      <created>1705958374669</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705958374669</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +238,7 @@
     <MESSAGE value="Added unversioned files" />
     <MESSAGE value="Added untested movement based on hall-effect sensor readings and refactored code to make it more consistent" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Added comments and inline documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments and inline documentation" />
   </component>
 </project>
