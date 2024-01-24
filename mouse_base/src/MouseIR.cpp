@@ -45,8 +45,7 @@ void IRReading::serialOutputValues() const {
     Serial.println();
 }
 
-IRReading IRReading::difference(const IRReading &before, const IRReading &after)
-{
+IRReading IRReading::difference(const IRReading &before, const IRReading &after) {
     return IRReading {
         before.leftSide > after.leftSide ? 0 : after.leftSide - before.leftSide,
         before.leftAngled > after.leftAngled ? 0 : after.leftAngled - before.leftAngled,
@@ -79,8 +78,7 @@ void IRReading::calibrate(const IRCalibrationSet &calibrations) {
     rightForward = apply_calibration(rightForward, calibrations.rightForward);
 }
 
-void MouseIR::enableIr(const SensorDirection direction)
-{
+void MouseIR::enableIr(const SensorDirection direction) {
     // Forward
     if (direction == SensorDirection::Forward) {
         PORTB |= 1<<0;
@@ -96,8 +94,7 @@ void MouseIR::enableIr(const SensorDirection direction)
 }
 
 
-void MouseIR::disableIr(const SensorDirection direction)
-{
+void MouseIR::disableIr(const SensorDirection direction) {
     if (direction == SensorDirection::Forward) {
         PORTB &= ~(1<<0);
     }
@@ -170,8 +167,7 @@ IRCalibrationSet MouseIR::getIrCalibrationsBlocking() {
     }
 }
 
-IRReading MouseIR::readAllIrRaw()
-{
+IRReading MouseIR::readAllIrRaw() {
     const unsigned left_side = analogRead(SEN_LS);
     const unsigned left_angled = analogRead(SEN_LA);
     const unsigned left_forward = analogRead(SEN_LF);
@@ -190,8 +186,7 @@ IRReading MouseIR::readAllIrRaw()
     };
 }
 
-IRReading MouseIR::readAllIrRelative()
-{
+IRReading MouseIR::readAllIrRelative() {
     const IRReading before = readAllIrRaw();
 
     enableIr(SensorDirection::Side);

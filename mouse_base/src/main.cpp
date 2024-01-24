@@ -33,8 +33,7 @@ void setup() {
     Serial.println("Calibration complete");
 }
 
-void loop()
-{
+void loop() {
     IRReading sensors = MouseIR::readAllIrRelative();
     Serial.println("Sensors before calibration:");
     sensors.serialPrettyPrintValues();

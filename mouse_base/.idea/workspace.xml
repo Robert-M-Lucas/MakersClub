@@ -14,9 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Added comments and inline documentation">
+    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../visualise_sensors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../visualise_sensors/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,9 +119,9 @@
   }
 }</component>
   <component name="RunManager" selected="Python.export_arduino">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="export_arduino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -156,8 +156,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.export_arduino" />
       <item itemvalue="PlatformIO.PlatformIO" />
+      <item itemvalue="Python.export_arduino" />
     </list>
     <recent_temporary>
       <list>
@@ -178,7 +178,8 @@
       <workItem from="1705508444493" duration="1733000" />
       <workItem from="1705852484433" duration="29000" />
       <workItem from="1705951036378" duration="6926000" />
-      <workItem from="1705960989448" duration="3000" />
+      <workItem from="1705960989448" duration="299000" />
+      <workItem from="1706121728436" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -228,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705958374669</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update">
+      <option name="closed" value="true" />
+      <created>1705961253515</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705961253515</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,8 +246,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added unversioned files" />
     <MESSAGE value="Added untested movement based on hall-effect sensor readings and refactored code to make it more consistent" />
-    <MESSAGE value="Update" />
     <MESSAGE value="Added comments and inline documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments and inline documentation" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
