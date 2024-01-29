@@ -7,38 +7,39 @@
 #include <Arduino.h>
 #include "Pins.h"
 
-void MouseMovement::runMotors(const int left, int right) {
-    right *= -1;
+void MouseMovement::runMotors(int left, const int right) {
 
-    if (left == 0) {
+    left *= -1;
+
+    if (right == 0) {
         digitalWrite(MOTOR_A1, 0);
         digitalWrite(MOTOR_A2, 0);
     }
-    else if (left > 0) {
+    else if (right > 0) {
         digitalWrite(MOTOR_A1, 0);
-        analogWrite(MOTOR_A2, left);
+        analogWrite(MOTOR_A2, right);
     }
     else {
-        digitalWrite(MOTOR_A1, -left);
+        digitalWrite(MOTOR_A1, -right);
         analogWrite(MOTOR_A2, 0);
     }
-    if (right == 0) {
+    if (left == 0) {
         digitalWrite(MOTOR_B1, 0);
         digitalWrite(MOTOR_B2, 0);
     }
-    else if (right > 0) {
+    else if (left > 0) {
         digitalWrite(MOTOR_B1, 0);
-        analogWrite(MOTOR_B2, right);
+        analogWrite(MOTOR_B2, left);
     }
     else {
-        digitalWrite(MOTOR_B1, -right);
+        digitalWrite(MOTOR_B1, -left);
         analogWrite(MOTOR_B2, 0);
     }
 }
 
 Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsRight, const int stepSize = 0) {
-    int left_remaining = stepsLeft;
-    int right_remaining = stepsRight;
+    int left_remaining = abs(stepsLeft);
+    int right_remaining = abs(stepsRight);
 
     const int motor_dir_left = stepsLeft > 0 ? 1 : -1;
     const int motor_dir_right = stepsRight > 0 ? 1 : -1;
@@ -52,21 +53,21 @@ Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsR
 
         // Every change in magnetism is 1 step
         if (left_reading != prev_left_reading) {
-            left_remaining -= motor_dir_left;
+            left_remaining -= 1;
         }
         if (right_reading != prev_right_reading) {
-            right_remaining -= motor_dir_right;
+            right_remaining -= 1;
         }
         prev_left_reading = left_reading;
         prev_right_reading = right_reading;
 
-        if (left_remaining * motor_dir_left <= 0 && right_remaining * motor_dir_right <= 0) { break; }
+        if (left_remaining <= 0 && right_remaining <= 0) { break; }
 
         runMotors(
-            left_remaining * motor_dir_left > 0 &&
+            left_remaining > 0 &&
                 (stepSize == 0 || right_remaining - left_remaining < stepSize) ?
                 motor_dir_left * static_cast<int>(MOVEMENT_SPEED) : 0,
-            right_remaining * motor_dir_right > 0 &&
+            right_remaining > 0 &&
                 (stepSize == 0 || left_remaining - right_remaining < stepSize) ?
                 motor_dir_right * static_cast<int>(MOVEMENT_SPEED) : 0
         );
@@ -115,12 +116,12 @@ bool MouseMovement::updateMovement() {
     }
 
     runMotors(
-        leftStepsRemaining * motorDirectionLeft > 0 &&
-            (stepSize == 0 || rightStepsRemaining - leftStepsRemaining < stepSize) ?
-            motorDirectionLeft * static_cast<int>(MOVEMENT_SPEED) : 0,
         rightStepsRemaining * motorDirectionRight > 0 &&
-            (stepSize == 0 || leftStepsRemaining - rightStepsRemaining < stepSize) ?
-            motorDirectionRight * static_cast<int>(MOVEMENT_SPEED) : 0
+        (stepSize == 0 || leftStepsRemaining - rightStepsRemaining < stepSize) ?
+            motorDirectionRight * static_cast<int>(MOVEMENT_SPEED) : 0,
+        leftStepsRemaining * motorDirectionLeft > 0 &&
+        (stepSize == 0 || rightStepsRemaining - leftStepsRemaining < stepSize) ?
+            motorDirectionLeft * static_cast<int>(MOVEMENT_SPEED) : 0
     );
 
     return true;

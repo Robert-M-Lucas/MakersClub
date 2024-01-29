@@ -4,7 +4,8 @@ import os
 if input("This will delete mouse_base_export. Proceed? (Y/N): ").lower() != "y":
     exit(-1)
 
-shutil.rmtree("../mouse_base_export")
+if os.path.isdir("../mouse_base_export"):
+    shutil.rmtree("../mouse_base_export")
 
 shutil.copytree("src", "../mouse_base_export")
 

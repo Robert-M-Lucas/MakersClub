@@ -34,9 +34,9 @@
 /// Analog Right-Forward IR sensor
 #define SEN_RF A0 // PF7
 
-/// Digital input pin for the (left?) hall-effect sensor
+/// Digital input pin for the left hall-effect sensor
 #define MAG_ENCA 4 // PD4
-/// Digital input pin for the (right?) hall-effect sensor
-#define MAG_ENCB 60 // PD5
+/// Digital input pin for the right hall-effect sensor
+#define MAG_ENCB 30 // PD5
 
 #endif
