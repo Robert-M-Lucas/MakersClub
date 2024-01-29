@@ -4,6 +4,7 @@
 #include "Mouse.h"
 #include "MouseIR.h"
 #include "MouseMovement.h"
+#include "MazeInterface.h"
 
 // TODO: Is MSLEEP_PIN important
 // TODO: Fill in all inline documentation in Pins.h
@@ -15,6 +16,7 @@
 // TODO: Check that MAG_ENCA and MAG_ENCB are the correct way around (left-right)
 // TODO: Test movement with hall-effect sensors
 // TODO: What does Controller.h do?
+// TODO: Fill out MazeInterface
 
 CRGB addressable_led[1];
 

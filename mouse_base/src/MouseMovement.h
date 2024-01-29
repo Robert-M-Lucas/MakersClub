@@ -23,18 +23,20 @@ class MouseMovement {
 
     bool prevLeftReading = false;
     bool prevRightReading = false;
+
+    int stepSize = 0;
 public:
     /// Sets the left/right motors to run at the given values
     static void runMotors(int left, int right);
 
     /// Runs the motors until they have moved the given number of steps
     /// <returns>Returns the overshoot of the target steps</returns>
-    static Overshoot moveStepsBlocking(int stepsLeft, int stepsRight);
+    static Overshoot moveStepsBlocking(int stepsLeft, int stepsRight, int stepSize);
 
     /// Starts a movement that will run the motors until they have moved the given number of steps
     ///
     /// Requires updateMovement to be called in a tight loop until the movement is complete
-    void moveStepsNonBlocking(int stepsLeft, int stepsRight);
+    void moveStepsNonBlocking(int stepsLeft, int stepsRight, int stepSize);
 
     /// Moves the mouse until the current movement is completed
     ///

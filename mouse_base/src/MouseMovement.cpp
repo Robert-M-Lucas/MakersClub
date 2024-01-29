@@ -36,7 +36,7 @@ void MouseMovement::runMotors(const int left, int right) {
     }
 }
 
-Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsRight) {
+Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsRight, const int stepSize = 0) {
     int left_remaining = stepsLeft;
     int right_remaining = stepsRight;
 
@@ -63,8 +63,12 @@ Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsR
         if (left_remaining * motor_dir_left <= 0 && right_remaining * motor_dir_right <= 0) { break; }
 
         runMotors(
-            left_remaining * motor_dir_left > 0 ? motor_dir_left * static_cast<int>(MOVEMENT_SPEED) : 0,
-            right_remaining * motor_dir_right > 0 ? motor_dir_right * static_cast<int>(MOVEMENT_SPEED) : 0
+            left_remaining * motor_dir_left > 0 &&
+                (stepSize == 0 || right_remaining - left_remaining < stepSize) ?
+                motor_dir_left * static_cast<int>(MOVEMENT_SPEED) : 0,
+            right_remaining * motor_dir_right > 0 &&
+                (stepSize == 0 || left_remaining - right_remaining < stepSize) ?
+                motor_dir_right * static_cast<int>(MOVEMENT_SPEED) : 0
         );
     }
 
@@ -73,7 +77,7 @@ Overshoot MouseMovement::moveStepsBlocking(const int stepsLeft, const int stepsR
     return Overshoot { left_remaining, right_remaining };
 }
 
-void MouseMovement::moveStepsNonBlocking(const int stepsLeft, const int stepsRight) {
+void MouseMovement::moveStepsNonBlocking(const int stepsLeft, const int stepsRight, const int stepSize = 0) {
     movementInProgress = true;
 
     leftStepsRemaining = stepsLeft;
@@ -84,6 +88,8 @@ void MouseMovement::moveStepsNonBlocking(const int stepsLeft, const int stepsRig
 
     prevLeftReading = digitalRead(MAG_ENCA);
     prevRightReading = digitalRead(MAG_ENCB);
+
+    MouseMovement::stepSize = stepSize;
 }
 
 bool MouseMovement::updateMovement() {
@@ -109,8 +115,12 @@ bool MouseMovement::updateMovement() {
     }
 
     runMotors(
-        leftStepsRemaining * motorDirectionLeft > 0 ? motorDirectionLeft * MOVEMENT_SPEED : 0,
-        rightStepsRemaining * motorDirectionRight > 0 ? motorDirectionRight * MOVEMENT_SPEED : 0
+        leftStepsRemaining * motorDirectionLeft > 0 &&
+            (stepSize == 0 || rightStepsRemaining - leftStepsRemaining < stepSize) ?
+            motorDirectionLeft * static_cast<int>(MOVEMENT_SPEED) : 0,
+        rightStepsRemaining * motorDirectionRight > 0 &&
+            (stepSize == 0 || leftStepsRemaining - rightStepsRemaining < stepSize) ?
+            motorDirectionRight * static_cast<int>(MOVEMENT_SPEED) : 0
     );
 
     return true;

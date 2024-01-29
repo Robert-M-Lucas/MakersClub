@@ -14,8 +14,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Update">
+    <list default="true" id="0a95c485-03ab-460f-b5c1-93095fecf66c" name="Changes" comment="Style changes">
+      <change afterPath="$PROJECT_DIR$/src/MazeInterface.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MazeInterface.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseMovement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseMovement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseMovement.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseMovement.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +31,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="leonardo" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="bathmouse" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -98,6 +103,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;PlatformIO.PlatformIO.executor&quot;: &quot;Run&quot;,
     &quot;Python.export_arduino.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
@@ -118,7 +124,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.export_arduino">
+  <component name="RunManager" selected="PlatformIO.PlatformIO">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -179,7 +185,11 @@
       <workItem from="1705852484433" duration="29000" />
       <workItem from="1705951036378" duration="6926000" />
       <workItem from="1705960989448" duration="299000" />
-      <workItem from="1706121728436" duration="237000" />
+      <workItem from="1706121728436" duration="422000" />
+      <workItem from="1706392261193" duration="16000" />
+      <workItem from="1706521451897" duration="1009000" />
+      <workItem from="1706522470982" duration="632000" />
+      <workItem from="1706523112745" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -237,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705961253515</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Style changes">
+      <option name="closed" value="true" />
+      <created>1706122139418</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706122139418</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +266,7 @@
     <MESSAGE value="Added untested movement based on hall-effect sensor readings and refactored code to make it more consistent" />
     <MESSAGE value="Added comments and inline documentation" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Style changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style changes" />
   </component>
 </project>
