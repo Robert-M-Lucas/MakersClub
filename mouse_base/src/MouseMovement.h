@@ -10,8 +10,6 @@ struct Overshoot {
     int right;
 };
 
-constexpr unsigned short MOVEMENT_SPEED = 50;
-
 class MouseMovement {
     bool movementInProgress = false;
 
@@ -25,18 +23,25 @@ class MouseMovement {
     bool prevRightReading = false;
 
     int stepSize = 0;
+
+    int movementSpeed = 0;
 public:
     /// Sets the left/right motors to run at the given values
-    static void runMotors(int left, int right);
+    static void setMotorsPower(int left, int right);
 
     /// Runs the motors until they have moved the given number of steps
+    ///
+    /// stepSize refers to how far one motor can get ahead of the other before it stops to get back in sync
+    ///
     /// <returns>Returns the overshoot of the target steps</returns>
-    static Overshoot moveStepsBlocking(int stepsLeft, int stepsRight, int stepSize = 0);
+    static Overshoot moveStepsBlocking(int stepsLeft, int stepsRight, int movementSpeed, int stepSize = 0);
 
     /// Starts a movement that will run the motors until they have moved the given number of steps
     ///
+    /// stepSize refers to how far one motor can get ahead of the other before it stops to get back in sync
+    ///
     /// Requires updateMovement to be called in a tight loop until the movement is complete
-    void moveStepsNonBlocking(int stepsLeft, int stepsRight, int stepSize = 0);
+    void moveStepsNonBlocking(int stepsLeft, int stepsRight, int movementSpeed, int stepSize = 0);
 
     /// Moves the mouse until the current movement is completed
     ///

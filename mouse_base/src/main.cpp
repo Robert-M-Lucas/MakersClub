@@ -16,6 +16,7 @@
 // TODO: Test movement with hall-effect sensors
 // TODO: What does Controller.h do?
 // TODO: Fill out MazeInterface
+// TODO: Make MouseMovement compensate for overshoot
 
 CRGB addressable_led[1];
 
@@ -35,43 +36,17 @@ void setup() {
     // Serial.println("Starting calibration - use calibration software to complete this step");
     // ir_calibrations = MouseIR::getIrCalibrationsBlocking();
     // Serial.println("Calibration complete");
-    int fwd = 26;
-    int trn = 6;
 
     delay(3000);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(trn, -trn, 5);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(trn, -trn, 5);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(trn, -trn, 5);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(trn, -trn, 5);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
-    delay(500);
-    MouseMovement::moveStepsBlocking(fwd, fwd, 3);
+    for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
+    MazeInterface::TurnRight(); delay(500);
+    for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
+    MazeInterface::TurnRight(); delay(500);
+    for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
+    MazeInterface::TurnRight(); delay(500);
+    for (int i = 0; i < 2; i++) { MazeInterface::MoveForward(); delay(500); }
+    MazeInterface::TurnRight(); delay(500);
+    for (int i = 0; i < 2; i++) { MazeInterface::MoveForward(); delay(500); }
 }
 
 void loop() {

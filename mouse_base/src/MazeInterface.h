@@ -11,15 +11,20 @@ struct OpenPaths {
     bool right;
 };
 
+constexpr int FORWARD_STEPS = 26;
+constexpr int FORWARD_SPEED = 200;
+constexpr int TURN_STEPS = 13;
+constexpr int TURN_SPEED = 50;
+
 class MazeInterface {
 public:
-    void MoveForward();
+    static void MoveForward();
 
-    void TurnLeft();
+    static void TurnLeft();
 
-    void TurnRight();
+    static void TurnRight();
 
-    OpenPaths GetOpenPaths();
+    static OpenPaths GetOpenPaths();
 };
 
 
