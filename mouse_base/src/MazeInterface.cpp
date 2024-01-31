@@ -11,11 +11,11 @@ void MazeInterface::MoveForward() {
 }
 
 void MazeInterface::TurnLeft() {
-    MouseMovement::moveStepsBlocking(TURN_STEPS, -TURN_STEPS, TURN_SPEED);
+    MouseMovement::moveStepsBlocking(-TURN_STEPS, TURN_STEPS, TURN_SPEED);
 }
 
 void MazeInterface::TurnRight() {
-    MouseMovement::moveStepsBlocking(-TURN_STEPS, TURN_STEPS, TURN_SPEED);
+    MouseMovement::moveStepsBlocking(TURN_STEPS, -TURN_STEPS, TURN_SPEED);
 }
 
 OpenPaths MazeInterface::GetOpenPaths() {

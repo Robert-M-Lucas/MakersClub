@@ -188,6 +188,7 @@ IRReading MouseIR::readAllIrRaw() {
 
 IRReading MouseIR::readAllIrRelative() {
     const IRReading before = readAllIrRaw();
+    before.serialPrettyPrintValues();
 
     enableIr(SensorDirection::Side);
     const unsigned left_side = analogRead(SEN_LS);

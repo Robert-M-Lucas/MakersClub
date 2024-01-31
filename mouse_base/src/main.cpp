@@ -25,7 +25,11 @@ IRCalibrationSet ir_calibrations;
 void setup() {
     Serial.begin(9600);
 
-    Serial.println("Initialising");
+    while (true) {
+        MouseIR::readAllIrRelative().serialPrettyPrintValues();
+    }
+
+    Serial.println("Initializing");
 
     Mouse::initialiseAllIO();
 
@@ -33,20 +37,20 @@ void setup() {
     CFastLED::addLeds<WS2812B, LED_PIN, GRB>(addressable_led, 1);
 
 
-    // Serial.println("Starting calibration - use calibration software to complete this step");
-    // ir_calibrations = MouseIR::getIrCalibrationsBlocking();
-    // Serial.println("Calibration complete");
+    Serial.println("Starting calibration - use calibration software to complete this step");
+    ir_calibrations = MouseIR::getIrCalibrationsBlocking();
+    Serial.println("Calibration complete");
 
-    delay(3000);
-    for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
-    MazeInterface::TurnRight(); delay(500);
-    for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
-    MazeInterface::TurnRight(); delay(500);
-    for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
-    MazeInterface::TurnRight(); delay(500);
-    for (int i = 0; i < 2; i++) { MazeInterface::MoveForward(); delay(500); }
-    MazeInterface::TurnRight(); delay(500);
-    for (int i = 0; i < 2; i++) { MazeInterface::MoveForward(); delay(500); }
+    // delay(3000);
+    // for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
+    // MazeInterface::TurnRight(); delay(500);
+    // for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
+    // MazeInterface::TurnRight(); delay(500);
+    // for (int i = 0; i < 3; i++) { MazeInterface::MoveForward(); delay(500); }
+    // MazeInterface::TurnRight(); delay(500);
+    // for (int i = 0; i < 2; i++) { MazeInterface::MoveForward(); delay(500); }
+    // MazeInterface::TurnRight(); delay(500);
+    // for (int i = 0; i < 2; i++) { MazeInterface::MoveForward(); delay(500); }
 }
 
 void loop() {

@@ -13,7 +13,7 @@ struct OpenPaths {
 
 constexpr int FORWARD_STEPS = 26;
 constexpr int FORWARD_SPEED = 200;
-constexpr int TURN_STEPS = 13;
+constexpr int TURN_STEPS = 9;
 constexpr int TURN_SPEED = 50;
 
 class MazeInterface {
