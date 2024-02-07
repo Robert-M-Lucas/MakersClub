@@ -15,7 +15,8 @@
 /// ???
 #define MOTOR_B2 10 // PCPB6
 
-//#define IREMIT_FORWARD //RXLED //PB0
+/// ???
+#define IREMIT_FORWARD 7 //RXLED //PB0
 /// ???
 #define IREMIT_SIDE 13 // PC7
 /// ???

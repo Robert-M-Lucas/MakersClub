@@ -85,11 +85,13 @@ void MouseIR::enableIr(const SensorDirection direction) {
     }
     // Side
     else if (direction == SensorDirection::Side) {
-        PORTC |= 1<<7;
+        digitalWrite(IREMIT_SIDE, HIGH);
+//        PORTC |= 1<<7;
     }
     // Angle
     else if (direction == SensorDirection::Angle) {
-        PORTB |= 1<<7;
+        digitalWrite(IREMIT_ANGLE, HIGH);
+//        PORTB |= 1<<7;
     }
 }
 
@@ -99,10 +101,12 @@ void MouseIR::disableIr(const SensorDirection direction) {
         PORTB &= ~(1<<0);
     }
     else if (direction == SensorDirection::Side) {
-        PORTC &= ~(1<<7);
+        digitalWrite(IREMIT_SIDE, LOW);
+//        PORTC &= ~(1<<7);
     }
     else if (direction == SensorDirection::Angle) {
-        PORTB &= ~(1<<7);
+        digitalWrite(IREMIT_ANGLE, LOW);
+//        PORTB &= ~(1<<7);
     }
 }
 
@@ -188,7 +192,6 @@ IRReading MouseIR::readAllIrRaw() {
 
 IRReading MouseIR::readAllIrRelative() {
     const IRReading before = readAllIrRaw();
-    before.serialPrettyPrintValues();
 
     enableIr(SensorDirection::Side);
     const unsigned left_side = analogRead(SEN_LS);

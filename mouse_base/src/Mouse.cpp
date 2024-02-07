@@ -20,7 +20,7 @@ void Mouse::initialiseAllIO() {
     digitalWrite(MSLEEP_PIN, 1);
 
     // ir emitters
-    //digitalWrite(IREMIT_FORWARD, OUTPUT);
+    digitalWrite(IREMIT_FORWARD, OUTPUT);
     pinMode(IREMIT_ANGLE, OUTPUT);
     pinMode(IREMIT_SIDE, OUTPUT);
     // pinMode(IREMIT_FORWARD, 0);
